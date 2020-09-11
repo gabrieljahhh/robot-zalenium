@@ -33,5 +33,9 @@ $ docker run -v /your-path\demo\tests:/robot/tests -v /your-path/demo/results:/r
 Open Browser    about:blank    ${BROWSER}   remote_url=http://IP:4444/wd/hub
 ```
  
+ ### Comments
+ Add your libraries to install.txt file in the docker folder
+ 
+ 
 Thank You 
 ----
