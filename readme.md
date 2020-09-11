@@ -24,7 +24,8 @@ $ docker run -v /your-path\demo\tests:/robot/tests -v /your-path/demo/results:/r
 
 ### Important
 
-1 - You must change the paths currently for your project.
+1 - You must change the paths currently for your project
+
 2- In the resources.robot file - You must put your machine's ip for the project to run correctly inside Zalenium
 Change:
 ```sh
