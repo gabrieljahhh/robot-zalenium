@@ -1,0 +1,17 @@
+### MONTAR IMAGEM COM O DOCKERFILE
+docker build -t robot-run .
+
+##CONSTRUINDO CONTAINER DO SELENIUM E ZALENIUM
+## Alterar o diretório de armazenamento dos videos
+docker run --rm -ti -d --name zalenium -p 4444:4444 -e PULL_SELENIUM_IMAGE=true -v /var/run/docker.sock:/var/run/docker.sock -v C:\galeite\ibm\tim\automacao\docker\demo\results\videos:/home/seluser/videos --privileged dosel/zalenium start
+
+### EXECUTAR CONTAINER COM O TESTE
+## Aletar os diretórios de execução e saida de log
+docker run -v C:\galeite\ibm\tim\automacao\docker\demo\tests:/robot/tests -v C:\galeite\ibm\tim\automacao\docker\demo\results:/robot/results -v C:\galeite\ibm\tim\automacao\docker\demo\resources:/robot/resources robot-run robot -d ./results ./tests/TestDemo.robot
+
+
+### ACESSANDO O ZALENIUM
+http://IP:4444/grid/admin/live
+
+## Dashboard
+http://IP:4444/dashboard/
