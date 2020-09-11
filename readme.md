@@ -26,7 +26,9 @@ $ docker run -v /your-path\demo\tests:/robot/tests -v /your-path/demo/results:/r
 
 1 - You must change the paths currently for your project
 
-2- In the resources.robot file - You must change the your ip for the project to run correctly inside Zalenium: (not working with localhost or 127.0.0.1)
+2- In the resources.robot file - You must change the your ip for the project to run correctly inside Zalenium: 
+*(not working with localhost or 127.0.0.1)*
+
 ```sh
 Open Browser    about:blank    ${BROWSER}   remote_url=http://IP:4444/wd/hub
 ```
